@@ -1,5 +1,5 @@
 import json
-from order import Order
+from sources.order import Order
 
 class OrderBook:
 
@@ -62,7 +62,7 @@ if __name__ == '__main__':
     orderBook.print_table()
     orderBook.set_order_info(2, 200, 0)
     orderBook.print_table()
-    orderBook.add_orders((Order("Ask", 51, 1), Order("Bid", 57, 7), Order("Ask", 58, 8)))
+    orderBook.add_orders([Order("Ask", 51, 1), Order("Bid", 57, 7), Order("Ask", 58, 8)])
     orderBook.print_table()
     orderBook.dump_snapshot()
 
